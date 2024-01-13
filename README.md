@@ -7,16 +7,6 @@ In this assignment, you will write a program to simulate an online store for a s
 
 Starter code has been provided for you. Your task is to complete the starter code in `Main.java` and to create a new class called `Store` that has the methods detailed below. You will also create custom `Exception` classes.
 
-## Assignment Submission
-You will submit your assignment using GitHub Classroom.  When you are finished and want to make your final submission, use the checkin comment "FINAL SUBMISSION":
-
-        git add .
-        git commit -m "FINAL SUBMISSION"
-        git push origin main
-
-Any submission not having this comment will be assumed to be a work-in-progress and therefore will be ignored.  This implies that you must make your final push with this commit comment before the deadline.
-
-
 ## Methods to be Created
 The following methods will need to be created in the `Store` class:
  - `public Store(String inventoryFilePath)`: Constructor that takes the path to the inventory file as a parameter and initializes the store's inventory by reading the file and storing the data in a `List<Item>` The file should be read using `try-with-resources`. The fields in the `inventory.txt` file are of type `String` (the item name), `float` (the price) and `int` (the quantity) respectively. If a `NumberFormatException` is encountered while reading any of the values, it should be caught and the error message shown in the output example below should be printed. Processing of the file should stop at that point so that the final `List<Item>` contains only objects derived from the valid records encountered up to the point of the error. If an `IOException` is encountered during this process (because the input file does not exist), it should be thrown so that the condition can be handled by the calling method.
